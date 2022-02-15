@@ -99,7 +99,7 @@ const Nav = () => {
 						<Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
 							{/* <a className={ classes.brandLink } href="/">2omb Finance</a> */}
 							<Link to="/" color="inherit" className={classes.brandLink}>
-								2omb Finance
+								2 | 3omb
 							</Link>
 						</Typography>
 						<Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
@@ -137,9 +137,9 @@ const Nav = () => {
 							<a target="_blank" href="https://www.devilfinance.io" className={classes.link}>
 								Vaults
 							</a>
-							<a target="_blank" href="https://snapshot.org/#/forgiving.forg.eth" className={classes.link}>
+							{/* <a target="_blank" href="https://snapshot.org/#/forgiving.forg.eth" className={classes.link}>
 								Governance
-							</a>
+							</a> */}
 							{/* <a target="_blank" href="https://docs.2omb.finance/contracts/tokens" className={classes.link}>
                 Contracts
               </a> */}

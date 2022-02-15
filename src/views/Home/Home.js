@@ -229,11 +229,11 @@ const Home = () => {
                 <span style={{ fontSize: '30px' }}>{tombPriceInFTM ? tombPriceInFTM : '-.----'} FTM</span>
               </Box>
               <Box>
-                <span style={{ fontSize: '16px', alignContent: 'flex-start' }}>
+                <span style={{ fontSize: '18px', alignContent: 'flex-start' }}>
                   ${tombPriceInDollars ? tombPriceInDollars : '-.--'}
                 </span>
               </Box>
-              <span style={{ fontSize: '12px' }}>
+              <span style={{ fontSize: '14px' }}>
                 Market Cap: ${(tombCirculatingSupply * tombPriceInDollars).toFixed(2)} <br />
                 Circulating Supply: {tombCirculatingSupply} <br />
                 Total Supply: {tombTotalSupply-140000}
@@ -256,11 +256,11 @@ const Home = () => {
                 <span style={{ fontSize: '30px' }}>{tombPriceInFTM ? tombPriceInFTM : '-.----'} FTM</span>
               </Box>
               <Box>
-                <span style={{ fontSize: '16px', alignContent: 'flex-start' }}>
+                <span style={{ fontSize: '18px', alignContent: 'flex-start' }}>
                   ${tombPriceInDollars ? tombPriceInDollars : '-.--'}
                 </span>
               </Box>
-              <span style={{ fontSize: '12px' }}>
+              <span style={{ fontSize: '14px' }}>
                 Market Cap: ${(tombCirculatingSupply * tombPriceInDollars).toFixed(2)} <br />
                 Circulating Supply: {tombCirculatingSupply} <br />
                 Total Supply: {tombTotalSupply-140000}
@@ -284,9 +284,9 @@ const Home = () => {
                 <span style={{ fontSize: '30px' }}>{tSharePriceInFTM ? tSharePriceInFTM : '-.----'} FTM</span>
               </Box>
               <Box>
-                <span style={{ fontSize: '16px' }}>${tSharePriceInDollars ? tSharePriceInDollars : '-.--'}</span>
+                <span style={{ fontSize: '18px' }}>${tSharePriceInDollars ? tSharePriceInDollars : '-.--'}</span>
               </Box>
-              <span style={{ fontSize: '12px' }}>
+              <span style={{ fontSize: '14px' }}>
                 Market Cap: ${(tShareCirculatingSupply * tSharePriceInDollars).toFixed(2)} <br />
                 Circulating Supply: {tShareCirculatingSupply-balance} <br />
                 Total Supply: {tShareTotalSupply-balance}
@@ -310,9 +310,9 @@ const Home = () => {
                 <span style={{ fontSize: '30px' }}>{tBondPriceInFTM ? tBondPriceInFTM : '-.----'} FTM</span>
               </Box>
               <Box>
-                <span style={{ fontSize: '16px' }}>${tBondPriceInDollars ? tBondPriceInDollars : '-.--'}</span>
+                <span style={{ fontSize: '18px' }}>${tBondPriceInDollars ? tBondPriceInDollars : '-.--'}</span>
               </Box>
-              <span style={{ fontSize: '12px' }}>
+              <span style={{ fontSize: '14px' }}>
                 Market Cap: $-.-- <br />
                 Circulating Supply: ------ <br />
                 Total Supply: ------
@@ -345,8 +345,8 @@ const Home = () => {
                   {tombLPStats?.ftmAmount ? tombLPStats?.ftmAmount : '-.--'} FTM
                 </span>
               </Box>
-              <Box>${tombLPStats?.priceOfOne ? tombLPStats.priceOfOne : '-.--'}</Box>
-              <span style={{ fontSize: '12px' }}>
+              <Box style={{ fontSize: '18px' }}>${tombLPStats?.priceOfOne ? tombLPStats.priceOfOne : '-.--'}</Box>
+              <span style={{ fontSize: '14px' }}>
                 Liquidity: ${tombLPStats?.totalLiquidity ? tombLPStats.totalLiquidity : '-.--'} <br />
                 Total supply: {tombLPStats?.totalSupply ? tombLPStats.totalSupply : '-.--'}
               </span>
@@ -373,8 +373,8 @@ const Home = () => {
                   {tshareLPStats?.ftmAmount ? tshareLPStats?.ftmAmount : '-.--'} FTM
                 </span>
               </Box>
-              <Box>${tshareLPStats?.priceOfOne ? tshareLPStats.priceOfOne : '-.--'}</Box>
-              <span style={{ fontSize: '12px' }}>
+              <Box style={{ fontSize: '18px' }}>${tshareLPStats?.priceOfOne ? tshareLPStats.priceOfOne : '-.--'}</Box>
+              <span style={{ fontSize: '14px' }}>
                 Liquidity: ${tshareLPStats?.totalLiquidity ? tshareLPStats.totalLiquidity : '-.--'}
                 <br />
                 Total supply: {tshareLPStats?.totalSupply ? tshareLPStats.totalSupply : '-.--'}

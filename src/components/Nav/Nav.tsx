@@ -2,17 +2,17 @@ import React from 'react';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 import {
-	AppBar,
-	Box,
-	Drawer,
-	IconButton,
-	Toolbar,
-	Typography,
-	useMediaQuery,
-	List,
-	ListItem,
-	ListItemText,
-	Divider,
+  AppBar,
+  Box,
+  Drawer,
+  IconButton,
+  Toolbar,
+  Typography,
+  useMediaQuery,
+  List,
+  ListItem,
+  ListItemText,
+  Divider,
 } from '@material-ui/core';
 
 import ListItemLink from '../ListItemLink';
@@ -24,72 +24,75 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AccountButton from './AccountButton';
 
 const useStyles = makeStyles((theme) => ({
-	'@global': {
-		ul: {
-			margin: 0,
-			padding: 0,
-			listStyle: 'none',
-		},
-	},
-	appBar: {
-		color: '#FFF',
-		'background-color': '#5f4aff22',
-		// borderBottom: `1px solid ${theme.palette.divider}`,
-		'backdrop-filter': "blur(2px)",
-		padding: '0 10px',
-		marginBottom: '3rem',
-	},
-	drawer: {
-		width: 240,
-		flexShrink: 0,
-		'background-color': '#5f4aff',
-	},
-	drawerPaper: {
-		width: 240,
-	},
-	hide: {
-		display: 'none',
-	},
-	toolbar: {
-		flexWrap: 'wrap',
-	},
-	toolbarTitle: {
-		fontFamily: '"Gilroy"',
-		fontSize: '30px',
-		flexGrow: 1,
-	},
-	link: {
-		textTransform: 'uppercase',
-		color: 'var(--white)',
-		fontSize: '14px',
-		margin: theme.spacing(1, 2),
-		textDecoration: 'none',
-		'&:hover': {
-			textDecoration: 'none',
-		},
-	},
-	brandLink: {
-		textDecoration: 'none',
-		color: 'var(--white)',
-		'&:hover': {
-			textDecoration: 'none',
-		},
-	},
+  '@global': {
+    ul: {
+      margin: 0,
+      padding: 0,
+      listStyle: 'none',
+    },
+  },
+  appBar: {
+    color: '#FFF',
+    'background-color': '#5f4aff22',
+    // borderBottom: `1px solid ${theme.palette.divider}`,
+    'backdrop-filter': "blur(2px)",
+    padding: '0 10px',
+    marginBottom: '3rem',
+  },
+  drawer: {
+    width: 240,
+    flexShrink: 0,
+    'background-color': '#5f4aff',
+  },
+  drawerPaper: {
+    width: 240,
+  },
+  hide: {
+    display: 'none',
+  },
+  toolbar: {
+    flexWrap: 'wrap',
+  },
+  toolbarTitle: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontFamily: '"Gilroy"',
+    fontSize: '30px',
+    flexGrow: 1,
+  },
+  link: {
+    textTransform: 'uppercase',
+    color: 'var(--white)',
+    fontSize: '14px',
+    margin: theme.spacing(1, 2),
+    textDecoration: 'none',
+    '&:hover': {
+      textDecoration: 'none',
+    },
+  },
+  brandLink: {
+    textDecoration: 'none',
+    color: 'var(--white)',
+    '&:hover': {
+      textDecoration: 'none',
+    },
+  },
 }));
 
 const Nav = () => {
-	const matches = useMediaQuery('(min-width:900px)');
-	const classes = useStyles();
-	const theme = useTheme();
-	const [open, setOpen] = React.useState(false);
+  const matches = useMediaQuery('(min-width:900px)');
+  const classes = useStyles();
+  const theme = useTheme();
+  const [open, setOpen] = React.useState(false);
 
-	const handleDrawerOpen = () => {
-		setOpen(true);
-	};
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
 
-	const handleDrawerClose = () => {
-		setOpen(false);
-	};
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
 
 	return (
 		<AppBar position="static" elevation={0} className={classes.appBar}>
@@ -122,7 +125,7 @@ const Nav = () => {
 							{/* <Link color="textPrimary" to="/dividends" className={classes.link}>
                 Dividends
               </Link> */}
-							{/* <Link color="textPrimary" to="/sbs" className={classes.link}>
+              {/* <Link color="textPrimary" to="/sbs" className={classes.link}>
                 SBS
               </Link>
               <Link color="textPrimary" to="/liquidity" className={classes.link}>
@@ -143,69 +146,81 @@ const Nav = () => {
 							{/* <a target="_blank" href="https://docs.2omb.finance/contracts/tokens" className={classes.link}>
                 Contracts
               </a> */}
-							<a target="_blank" href="https://docs.2omb.finance" className={classes.link}>
-								Docs
-							</a>
-							<a target="_blank" href="https://3omb.finance/" className={classes.link}>
-								3omb
-							</a>
-						</Box>
-						<AccountButton text="Connect" />
-					</>
-				) : (
-					<>
-						<IconButton
-							color="inherit"
-							aria-label="open drawer"
-							onClick={handleDrawerOpen}
-							edge="start"
-							className={clsx(open && classes.hide)}
-						>
-							<MenuIcon />
-						</IconButton>
-						<Typography variant="h6" noWrap>
-							2omb Finance
-						</Typography>
+              <a target="_blank" href="https://docs.2omb.finance" className={classes.link}>
+                Docs
+              </a>
+              <a target="_blank" href="https://3omb.finance/" className={classes.link}>
+                3omb
+              </a>
+            </Box>
+            <AccountButton text="Connect" />
+          </>
+        ) : (
+          <>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              onClick={handleDrawerOpen}
+              edge="start"
+              className={clsx(open && classes.hide)}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="h6" noWrap>
+              2omb Finance
+            </Typography>
 
-						<Drawer
-							className={classes.drawer}
-							onEscapeKeyDown={handleDrawerClose}
-							onBackdropClick={handleDrawerClose}
-							variant="temporary"
-							anchor="left"
-							open={open}
-							classes={{
-								paper: classes.drawerPaper,
-							}}
-						>
-							<div>
-								<IconButton onClick={handleDrawerClose}>
-									{theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-								</IconButton>
-							</div>
-							<Divider />
-							<List>
-								<ListItemLink primary="HOME" to="/" />
-								<ListItemLink primary="FARMS" to="/farms" />
-								<ListItemLink primary="BOARDROOM" to="/boardroom" />
-								<ListItemLink primary="BONDS" to="/bonds" />
-								{/* <ListItemLink primary="DIVIDENDS" to="/dividends" /> */}
-								{/* <ListItemLink primary="SBS" to="/sbs" />
+            <Drawer
+              className={classes.drawer}
+              onEscapeKeyDown={handleDrawerClose}
+              onBackdropClick={handleDrawerClose}
+              variant="temporary"
+              anchor="left"
+              open={open}
+              classes={{
+                paper: classes.drawerPaper,
+              }}
+            >
+              <div>
+                <IconButton onClick={handleDrawerClose}>
+                  {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+                </IconButton>
+              </div>
+              <Divider />
+              <List>
+                <ListItemLink primary="HOME" to="/" />
+                <ListItemLink primary="FARMS" to="/farms" />
+                <ListItemLink primary="BOARDROOM" to="/boardroom" />
+                <ListItemLink primary="BONDS" to="/bonds" />
+                {/* <ListItemLink primary="DIVIDENDS" to="/dividends" /> */}
+                {/* <ListItemLink primary="SBS" to="/sbs" />
                 <ListItemLink primary="Liquidity" to="/liquidity" />
                 <ListItemLink primary="Regulations" to="/regulations" /> */}
-								<ListItem button component="a" href="https://docs.2omb.finance">
-									<ListItemText>DOCS</ListItemText>
-								</ListItem>
-								<ListItem style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-									<AccountButton text="Connect" />
-								</ListItem>
-							</List>
-						</Drawer>
-					</>
-				)}
-			</Toolbar>
-		</AppBar>
-	);
+                <ListItem button component="a" href="https://3omb.finance/rebates">
+                  <ListItemText>3DAO</ListItemText>
+                </ListItem>
+                <ListItem button component="a" href="https://www.devilfinance.io">
+                  <ListItemText>VAULTS</ListItemText>
+                </ListItem>
+                <ListItem button component="a" href="https://snapshot.org/#/forgiving.forg.eth">
+                  <ListItemText>GOVERNANCE</ListItemText>
+                </ListItem>
+                <ListItem button component="a" href="https://docs.2omb.finance">
+                  <ListItemText>DOCS</ListItemText>
+                </ListItem>
+                <ListItem button component="a" href="https://3omb.finance/">
+                  <ListItemText>3OMB</ListItemText>
+                </ListItem>
+                <ListItem style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <AccountButton text="Connect" onOpen={handleDrawerClose} />
+                </ListItem>
+              </List>
+            </Drawer>
+          </>
+        )}
+      </Toolbar>
+    </AppBar>
+  );
 };
 
 export default Nav;

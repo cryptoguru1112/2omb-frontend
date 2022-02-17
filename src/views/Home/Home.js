@@ -147,7 +147,7 @@ const Home = () => {
         <Grid item xs={12} sm={6}>
           <Paper>
             <Box p={4}>
-              <h2>Welcome to 2omb Finance!</h2>
+              <h2>Welcome to 2omb!</h2>
               <p>Pegged to the price of 1 FTM via seigniorage.</p>
               <p>
 							  <StyledLink href="/farms" style={{ color: '#05147c' }} >Stake</StyledLink> your 2OMB-FTM LP tokens to earn 2SHARE seigniorage rewards.
@@ -185,8 +185,11 @@ const Home = () => {
               {/* <Button href="/cemetery" variant="contained" style={{ marginRight: '25px' }}>
                 Stake Now
               </Button> */}
-              <Button color="primary" href="/farms" variant="contained" style={{ marginRight: '25px' }}>
+              <Button color="primary" href="/farms" variant="contained" style={{ marginRight: '10px' }}>
                 Farms
+              </Button>
+              <Button color="primary" href="/boardroom" variant="contained" style={{ marginRight: '25px' }}>
+                Stake
               </Button>
               <Button
                 color="contained"

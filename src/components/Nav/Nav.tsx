@@ -102,7 +102,7 @@ const Nav = () => {
 						<Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
 							{/* <a className={ classes.brandLink } href="/">2omb Finance</a> */}
 							<Link to="/" color="inherit" className={classes.brandLink}>
-								2 | 3omb
+								2omb
 							</Link>
 						</Typography>
 						<Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
@@ -114,7 +114,7 @@ const Nav = () => {
 								Home
 							</Link>
 							<Link color="textPrimary" to="/farms" className={classes.link}>
-								Farms
+								2Farms
 							</Link>
 							<Link color="textPrimary" to="/boardroom" className={classes.link}>
 								Boardroom
@@ -167,7 +167,7 @@ const Nav = () => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" noWrap>
-              2omb Finance
+              2omb
             </Typography>
 
             <Drawer
@@ -189,7 +189,7 @@ const Nav = () => {
               <Divider />
               <List>
                 <ListItemLink primary="HOME" to="/" />
-                <ListItemLink primary="FARMS" to="/farms" />
+                <ListItemLink primary="2FARMS" to="/farms" />
                 <ListItemLink primary="BOARDROOM" to="/boardroom" />
                 <ListItemLink primary="BONDS" to="/bonds" />
                 {/* <ListItemLink primary="DIVIDENDS" to="/dividends" /> */}
@@ -202,9 +202,9 @@ const Nav = () => {
                 <ListItem button component="a" href="https://www.devilfinance.io">
                   <ListItemText>VAULTS</ListItemText>
                 </ListItem>
-                <ListItem button component="a" href="https://snapshot.org/#/forgiving.forg.eth">
+                {/* <ListItem button component="a" href="https://snapshot.org/#/forgiving.forg.eth">
                   <ListItemText>GOVERNANCE</ListItemText>
-                </ListItem>
+                </ListItem> */}
                 <ListItem button component="a" href="https://docs.2omb.finance">
                   <ListItemText>DOCS</ListItemText>
                 </ListItem>

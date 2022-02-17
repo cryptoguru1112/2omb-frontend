@@ -1,3 +1,5 @@
+
+   
 import React from 'react';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
@@ -106,8 +108,8 @@ const Nav = () => {
               </Link>
             </Typography>
             <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-              <a className={classes.link} target="_blank" href="https://github.com/2omb/audit/blob/main/2omb_Audit_Jan2022.pdf">Audited by</a>
-              <img width="125px" height="30px" src="https://spadetech.io/wp-content/uploads/elementor/thumbs/logo-2-p6mxojhv426tba93lpzfx3ft1m3dvq0k2hu2abrgi4.png"></img>
+              <a className={classes.link} target="_blank" rel="noopener noreferrer" href="https://github.com/2omb/audit/blob/main/2omb_Audit_Jan2022.pdf">Audited by</a>
+              <img width="125px" height="30px" alt="Spade Solidity Audits Logo" src="https://spadetech.io/wp-content/uploads/elementor/thumbs/logo-2-p6mxojhv426tba93lpzfx3ft1m3dvq0k2hu2abrgi4.png"></img>
             </Typography>
             <Box mr={5}>
               <Link color="textPrimary" to="/" className={classes.link}>
@@ -134,22 +136,22 @@ const Nav = () => {
               <Link color="textPrimary" to="/regulations" className={classes.link}>
                 Regulations
               </Link> */}
-              <a target="_blank" href="https://3omb.finance/rebates" className={classes.link}>
+              <a target="_blank" rel="noopener noreferrer" href="https://3omb.finance/rebates" className={classes.link}>
                 3DAO
               </a>
-              <a target="_blank" href="https://www.devilfinance.io" className={classes.link}>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.devilfinance.io" className={classes.link}>
                 Vaults
               </a>
-              <a target="_blank" href="https://snapshot.org/#/forgiving.forg.eth" className={classes.link}>
+              <a target="_blank" rel="noopener noreferrer" href="https://snapshot.org/#/forgiving.forg.eth" className={classes.link}>
                 Governance
               </a>
-              {/* <a target="_blank" href="https://docs.2omb.finance/contracts/tokens" className={classes.link}>
+              {/* <a target="_blank" rel="noopener noreferrer" href="https://docs.2omb.finance/contracts/tokens" className={classes.link}>
                 Contracts
               </a> */}
-              <a target="_blank" href="https://docs.2omb.finance" className={classes.link}>
+              <a target="_blank" rel="noopener noreferrer" href="https://docs.2omb.finance" className={classes.link}>
                 Docs
               </a>
-              <a target="_blank" href="https://3omb.finance/" className={classes.link}>
+              <a target="_blank" rel="noopener noreferrer" href="https://3omb.finance/" className={classes.link}>
                 3omb
               </a>
             </Box>

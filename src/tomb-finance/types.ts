@@ -14,16 +14,14 @@ export interface BankInfo {
   finished: boolean;
   closedForStaking: boolean;
   genesisFinished?: boolean;
-  totalBalance: number;
-  tokenAmounts: number;
 }
 
 export interface Bank extends BankInfo {
   address: string;
   depositToken: ERC20;
   earnToken: ERC20;
-  totalBalance: number;
-  tokenAmounts: number;
+  totalBalance?: number;
+  tokenAmounts?: number;
 }
 
 export type PoolStats = {

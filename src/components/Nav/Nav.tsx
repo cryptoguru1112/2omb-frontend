@@ -96,35 +96,36 @@ const Nav = () => {
     setOpen(false);
   };
 
-  return (
-    <AppBar position="static" elevation={0} className={classes.appBar}>
-      <Toolbar className={classes.toolbar}>
-        {matches ? (
-          <>
-            <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-              {/* <a className={ classes.brandLink } href="/">2omb Finance</a> */}
-              <Link to="/" color="inherit" className={classes.brandLink}>
-                2omb Finance
-              </Link>
-            </Typography>
-            <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-              <a className={classes.link} target="_blank" rel="noopener noreferrer" href="https://github.com/2omb/audit/blob/main/2omb_Audit_Jan2022.pdf">Audited by</a>
-              <img width="125px" height="30px" alt="Spade Solidity Audits Logo" src="https://spadetech.io/wp-content/uploads/elementor/thumbs/logo-2-p6mxojhv426tba93lpzfx3ft1m3dvq0k2hu2abrgi4.png"></img>
-            </Typography>
-            <Box mr={5}>
-              <Link color="textPrimary" to="/" className={classes.link}>
-                Home
-              </Link>
-              <Link color="textPrimary" to="/farms" className={classes.link}>
-                Farms
-              </Link>
-              <Link color="textPrimary" to="/boardroom" className={classes.link}>
-                Boardroom
-              </Link>
-              <Link color="textPrimary" to="/bonds" className={classes.link}>
-                Bonds
-              </Link>
-              {/* <Link color="textPrimary" to="/dividends" className={classes.link}>
+
+	return (
+		<AppBar position="static" elevation={0} className={classes.appBar}>
+			<Toolbar className={classes.toolbar}>
+				{matches ? (
+					<>
+						<Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
+							{/* <a className={ classes.brandLink } href="/">2omb Finance</a> */}
+							<Link to="/" color="inherit" className={classes.brandLink}>
+								2omb
+							</Link>
+						</Typography>
+						<Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
+							<a className={classes.link} target="_blank" href="https://github.com/2omb/audit/blob/main/2omb_Audit_Jan2022.pdf">Audited by</a>
+							<img width="125px" height="30px" src="https://spadetech.io/wp-content/uploads/elementor/thumbs/logo-2-p6mxojhv426tba93lpzfx3ft1m3dvq0k2hu2abrgi4.png"></img>
+						</Typography>
+						<Box mr={5}>
+							<Link color="textPrimary" to="/" className={classes.link}>
+								Home
+							</Link>
+							<Link color="textPrimary" to="/farms" className={classes.link}>
+								2Farms
+							</Link>
+							<Link color="textPrimary" to="/boardroom" className={classes.link}>
+								Boardroom
+							</Link>
+							<Link color="textPrimary" to="/bonds" className={classes.link}>
+								Bonds
+							</Link>
+							{/* <Link color="textPrimary" to="/dividends" className={classes.link}>
                 Dividends
               </Link> */}
               {/* <Link color="textPrimary" to="/sbs" className={classes.link}>
@@ -136,16 +137,16 @@ const Nav = () => {
               <Link color="textPrimary" to="/regulations" className={classes.link}>
                 Regulations
               </Link> */}
-              <a target="_blank" rel="noopener noreferrer" href="https://3omb.finance/rebates" className={classes.link}>
-                3DAO
-              </a>
-              <a target="_blank" rel="noopener noreferrer" href="https://www.devilfinance.io" className={classes.link}>
-                Vaults
-              </a>
-              <a target="_blank" rel="noopener noreferrer" href="https://snapshot.org/#/forgiving.forg.eth" className={classes.link}>
-                Governance
-              </a>
-              {/* <a target="_blank" rel="noopener noreferrer" href="https://docs.2omb.finance/contracts/tokens" className={classes.link}>
+							<a target="_blank" href="https://3omb.finance/rebates" className={classes.link}>
+								3DAO
+							</a>
+							<a target="_blank" href="https://www.devilfinance.io" className={classes.link}>
+								Vaults
+							</a>
+							{/* <a target="_blank" href="https://snapshot.org/#/forgiving.forg.eth" className={classes.link}>
+								Governance
+							</a> */}
+							{/* <a target="_blank" href="https://docs.2omb.finance/contracts/tokens" className={classes.link}>
                 Contracts
               </a> */}
               <a target="_blank" rel="noopener noreferrer" href="https://docs.2omb.finance" className={classes.link}>
@@ -169,7 +170,7 @@ const Nav = () => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" noWrap>
-              2omb Finance
+              2omb
             </Typography>
 
             <Drawer
@@ -191,7 +192,7 @@ const Nav = () => {
               <Divider />
               <List>
                 <ListItemLink primary="HOME" to="/" />
-                <ListItemLink primary="FARMS" to="/farms" />
+                <ListItemLink primary="2FARMS" to="/farms" />
                 <ListItemLink primary="BOARDROOM" to="/boardroom" />
                 <ListItemLink primary="BONDS" to="/bonds" />
                 {/* <ListItemLink primary="DIVIDENDS" to="/dividends" /> */}
@@ -204,9 +205,9 @@ const Nav = () => {
                 <ListItem button component="a" href="https://www.devilfinance.io">
                   <ListItemText>VAULTS</ListItemText>
                 </ListItem>
-                <ListItem button component="a" href="https://snapshot.org/#/forgiving.forg.eth">
+                {/* <ListItem button component="a" href="https://snapshot.org/#/forgiving.forg.eth">
                   <ListItemText>GOVERNANCE</ListItemText>
-                </ListItem>
+                </ListItem> */}
                 <ListItem button component="a" href="https://docs.2omb.finance">
                   <ListItemText>DOCS</ListItemText>
                 </ListItem>

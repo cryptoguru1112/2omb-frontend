@@ -54,7 +54,15 @@ body {
 .MuiButton-contained {
     border-radius: 4px !important;
 }
-
+.MuiAlert-message{
+    color:black;
+}
+.MuiAlert-icon{
+    color:black;
+}
+.MuiTypography-body1{
+    font-size: 1.1rem;
+}
 body {
     position: absolute;
     content: '';

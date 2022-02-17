@@ -76,16 +76,16 @@ const Cemetery = () => {
                   </Grid>
                 </div> */}
 
-                <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 0).length === 0}>
+                {/* <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 0).length === 0}>
                   <Typography color="textPrimary" variant="h4" gutterBottom style={{ marginTop: '20px' }}>
                     Genesis Pools
                   </Typography>
                   <Alert variant="filled" severity="warning">
                     Genesis Pools have ENDED. Please withdraw your funds.
                   </Alert>
-                  {/* <Typography color="textPrimary" variant="h4" gutterBottom>
+                  <Typography color="textPrimary" variant="h4" gutterBottom>
                     Decentralized Initial Supply Distribution
-                  </Typography> */}
+                  </Typography>
                   <Grid container spacing={3} style={{ marginTop: '20px' }}>
                     {activeBanks
                       .filter((bank) => bank.sectionInUI === 0)
@@ -95,7 +95,7 @@ const Cemetery = () => {
                         </React.Fragment>
                       ))}
                   </Grid>
-                </div>
+                </div> */}
               </Box>
             </Container>
           ) : (

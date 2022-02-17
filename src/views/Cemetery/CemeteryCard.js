@@ -5,6 +5,7 @@ import { Box, Button, Card, CardActions, CardContent, Typography, Grid } from '@
 import TokenSymbol from '../../components/TokenSymbol';
 
 const CemeteryCard = ({ bank }) => {
+  console.log(bank,"bankdata==============>")
   return (
     <Grid item xs={12} md={4} lg={4}>
 		 <Card variant="outlined" style={{ border: '1px solid var(--white)' }}>
@@ -34,7 +35,10 @@ const CemeteryCard = ({ bank }) => {
               Deposit {bank.depositTokenName.toUpperCase()} Earn {bank.earnTokenName}
             </Typography>
             <Typography color="textSecondary">
-              Multiplier: {bank.multiplier}
+              Market cap: $ {Number(bank.totalBalance)}
+            </Typography>
+            <Typography color="textSecondary">
+              Total token amount: {Number(bank.tokenAmounts).toFixed(2)}
             </Typography>
           </Box>
         </CardContent>

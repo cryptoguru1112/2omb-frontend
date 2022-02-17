@@ -207,7 +207,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     closedForStaking: true,
   },
   TombFtmLPTShareRewardPool: {
-    name: 'Earn 2SHARE by 2OMB-WFTM LP',
+    name: 'Earn 2SHARE by 2 | FTM',
     poolId: 0,
     sectionInUI: 2,
     contract: 'TombFtmLPTShareRewardPool',

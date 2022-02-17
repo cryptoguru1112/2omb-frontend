@@ -3,16 +3,16 @@ import Context from './context';
 import useTombFinance from '../../hooks/useTombFinance';
 import { Bank } from '../../tomb-finance';
 import config, { bankDefinitions } from '../../config';
-import { getBalance } from '../../utils/formatBalance';
 
 const Banks: React.FC = ({ children }) => {
   const [banks, setBanks] = useState<Bank[]>([]);
   const tombFinance = useTombFinance();
   const isUnlocked = tombFinance?.isUnlocked;
+
   const fetchPools = useCallback(async () => {
     const banks: Bank[] = [];
-    for (const bankInfo of Object.values(bankDefinitions)) {
 
+    for (const bankInfo of Object.values(bankDefinitions)) {
       if (bankInfo.finished) {
         if (!tombFinance.isUnlocked) continue;
 
@@ -26,20 +26,11 @@ const Banks: React.FC = ({ children }) => {
           continue;
         }
       }
-      let depositToken = tombFinance.externalTokens[bankInfo.depositTokenName];
-      let result = await tombFinance.getDepositTokenPriceInDollars(bankInfo.depositTokenName,depositToken);
-      let totalBalanceOf = await depositToken.balanceOf(config.deployments[bankInfo.contract].address);
-      let tokenBalance = getBalance(totalBalanceOf,18);
-      // console.log(result,"Token Price")
-      // console.log( getBalance(totalBalanceOf,18), "Total Balance");
-      // console.log( getBalance(totalBalanceOf,18)/ Number(result) , "Token Amount");
       banks.push({
         ...bankInfo,
         address: config.deployments[bankInfo.contract].address,
         depositToken: tombFinance.externalTokens[bankInfo.depositTokenName],
         earnToken: bankInfo.earnTokenName === '2OMB' ? tombFinance.TOMB : tombFinance.TSHARE,
-        totalBalance:tokenBalance,
-        tokenAmounts:tokenBalance/Number(result)
       });
     }
     banks.sort((a, b) => (a.sort > b.sort ? 1 : -1));

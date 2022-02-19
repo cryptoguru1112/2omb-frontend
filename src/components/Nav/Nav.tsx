@@ -96,10 +96,6 @@ const Nav = () => {
     setOpen(false);
   };
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 565cc43e3d553b192bafc3e68271eb54666c3065
 	return (
 		<AppBar position="static" elevation={0} className={classes.appBar}>
 			<Toolbar className={classes.toolbar}>

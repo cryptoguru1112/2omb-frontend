@@ -34,17 +34,9 @@ const CemeteryCard = ({ bank }) => {
               {/* {bank.name} */}
               Deposit {bank.depositTokenName.toUpperCase()} Earn {bank.earnTokenName}
             </Typography>
-<<<<<<< HEAD
-            <Typography color="textSecondary">
-              Market cap: $ {Number(bank.totalBalance)}
-            </Typography>
-            <Typography color="textSecondary">
-              Total token amount: {Number(bank.tokenAmounts).toFixed(2)}
-=======
             {/* Commenting out for now as it seems to be blocking and site doesnt load properly
              <Typography color="textSecondary">
               Market cap: $ {Number(bank.totalBalance)}
->>>>>>> 565cc43e3d553b192bafc3e68271eb54666c3065
             </Typography>
             <Typography color="textSecondary">
               Total token amount: {Number(bank.tokenAmounts).toFixed(2)}

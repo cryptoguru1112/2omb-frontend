@@ -1,3 +1,5 @@
+
+   
 import React from 'react';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
@@ -94,6 +96,10 @@ const Nav = () => {
     setOpen(false);
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 565cc43e3d553b192bafc3e68271eb54666c3065
 	return (
 		<AppBar position="static" elevation={0} className={classes.appBar}>
 			<Toolbar className={classes.toolbar}>
@@ -146,10 +152,10 @@ const Nav = () => {
 							{/* <a target="_blank" href="https://docs.2omb.finance/contracts/tokens" className={classes.link}>
                 Contracts
               </a> */}
-              <a target="_blank" href="https://docs.2omb.finance" className={classes.link}>
+              <a target="_blank" rel="noopener noreferrer" href="https://docs.2omb.finance" className={classes.link}>
                 Docs
               </a>
-              <a target="_blank" href="https://3omb.finance/" className={classes.link}>
+              <a target="_blank" rel="noopener noreferrer" href="https://3omb.finance/" className={classes.link}>
                 3omb
               </a>
             </Box>

@@ -134,6 +134,9 @@ const Home = () => {
     />,
   );
 
+  function currencyFormat(num) {
+    return Number(num).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+  }
   return (
     <Page>
       <BackgroundImage />
@@ -233,13 +236,13 @@ const Home = () => {
               </Box>
               <Box>
                 <span style={{ fontSize: '18px', alignContent: 'flex-start' }}>
-                  ${tombPriceInDollars ? tombPriceInDollars : '-.--'}
+                  ${tombPriceInDollars ? currencyFormat(tombPriceInDollars) : '-.--'}
                 </span>
               </Box>
               <span style={{ fontSize: '14px' }}>
-                Market Cap: ${(tombCirculatingSupply * tombPriceInDollars).toFixed(2)} <br />
-                Circulating Supply: {tombCirculatingSupply} <br />
-                Total Supply: {tombTotalSupply-140000}
+                Market Cap: ${currencyFormat(tombCirculatingSupply * tombPriceInDollars)} <br />
+                Circulating Supply: {currencyFormat(tombCirculatingSupply)} <br />
+                Total Supply: {currencyFormat(tombTotalSupply-140000)}
               </span>
             </CardContent>
           </Card>
@@ -287,12 +290,12 @@ const Home = () => {
                 <span style={{ fontSize: '30px' }}>{tSharePriceInFTM ? tSharePriceInFTM : '-.----'} FTM</span>
               </Box>
               <Box>
-                <span style={{ fontSize: '18px' }}>${tSharePriceInDollars ? tSharePriceInDollars : '-.--'}</span>
+                <span style={{ fontSize: '18px' }}>${tSharePriceInDollars ? currencyFormat(tSharePriceInDollars) : '-.--'}</span>
               </Box>
               <span style={{ fontSize: '14px' }}>
-                Market Cap: ${(tShareCirculatingSupply * tSharePriceInDollars).toFixed(2)} <br />
-                Circulating Supply: {tShareCirculatingSupply-balance} <br />
-                Total Supply: {tShareTotalSupply-balance}
+                Market Cap: ${currencyFormat(tShareCirculatingSupply * tSharePriceInDollars)} <br />
+                Circulating Supply: {currencyFormat(tShareCirculatingSupply-balance)} <br />
+                Total Supply: {currencyFormat(tShareTotalSupply-balance)}
               </span>
             </CardContent>
           </Card>
@@ -313,7 +316,7 @@ const Home = () => {
                 <span style={{ fontSize: '30px' }}>{tBondPriceInFTM ? tBondPriceInFTM : '-.----'} FTM</span>
               </Box>
               <Box>
-                <span style={{ fontSize: '18px' }}>${tBondPriceInDollars ? tBondPriceInDollars : '-.--'}</span>
+                <span style={{ fontSize: '18px' }}>${tBondPriceInDollars ? currencyFormat(tBondPriceInDollars) : '-.--'}</span>
               </Box>
               <span style={{ fontSize: '14px' }}>
                 Market Cap: $-.-- <br />
@@ -348,10 +351,10 @@ const Home = () => {
                   {tombLPStats?.ftmAmount ? tombLPStats?.ftmAmount : '-.--'} FTM
                 </span>
               </Box>
-              <Box style={{ fontSize: '18px' }}>${tombLPStats?.priceOfOne ? tombLPStats.priceOfOne : '-.--'}</Box>
+              <Box style={{ fontSize: '18px' }}>${tombLPStats?.priceOfOne ? currencyFormat(tombLPStats.priceOfOne) : '-.--'}</Box>
               <span style={{ fontSize: '14px' }}>
-                Liquidity: ${tombLPStats?.totalLiquidity ? tombLPStats.totalLiquidity : '-.--'} <br />
-                Total supply: {tombLPStats?.totalSupply ? tombLPStats.totalSupply : '-.--'}
+                Liquidity: ${tombLPStats?.totalLiquidity ? currencyFormat(tombLPStats.totalLiquidity) : '-.--'} <br />
+                Total supply: {tombLPStats?.totalSupply ? currencyFormat(tombLPStats.totalSupply) : '-.--'}
               </span>
             </CardContent>
           </Card>
@@ -378,9 +381,9 @@ const Home = () => {
               </Box>
               <Box style={{ fontSize: '18px' }}>${tshareLPStats?.priceOfOne ? tshareLPStats.priceOfOne : '-.--'}</Box>
               <span style={{ fontSize: '14px' }}>
-                Liquidity: ${tshareLPStats?.totalLiquidity ? tshareLPStats.totalLiquidity : '-.--'}
+                Liquidity: ${tshareLPStats?.totalLiquidity ? currencyFormat(tshareLPStats.totalLiquidity) : '-.--'}
                 <br />
-                Total supply: {tshareLPStats?.totalSupply ? tshareLPStats.totalSupply : '-.--'}
+                Total supply: {tshareLPStats?.totalSupply ? currencyFormat(tshareLPStats.totalSupply) : '-.--'}
               </span>
             </CardContent>
           </Card>

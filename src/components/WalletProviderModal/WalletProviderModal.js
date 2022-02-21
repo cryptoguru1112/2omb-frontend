@@ -28,38 +28,11 @@ const WalletProviderModal = ({ open, handleClose }) => {
 	const classes = useStyles();
 	const wallet = useWallet();
 	const { account, connect, ethereum } = useWallet();
-	console.log(wallet, "&^^^^^^^^^^^^^^^^^^^^^^^")
 	useEffect(() => {
 		if (account) {
 			handleClose();
 		}
 	});
-	const getProvider = () => {
-		if ("ethereum" in window) {
-			const provider = ethereum;
-			if (provider.isMathWallet) {
-				return provider;
-			}
-		}
-		window.open("https://mathwallet.org/", "_blank");
-	};
-	const walletConnect = async () => {
-		const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-		const account = accounts[0];
-		console.log(account, "========================>web3")
-		// console.log(account,"****************************")
-		// if (web3) {
-		//   if (!window.ethereum) {
-		// 	return;
-		//   }
-		//   else {
-		// 	const res = await window.ethereum.enable();        
-		// 	// if (res.length) {
-		// 	//   setOwnerAddress(res[0]);
-		// 	// }
-		//   }
-		// }
-	}
 	return (
 		<Modal
 			aria-labelledby="connect a wallet"

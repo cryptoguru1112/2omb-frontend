@@ -7,6 +7,7 @@ import walletConnectLogo from '../../assets/img/wallet-connect.svg';
 import coingBaseLogo from '../../assets/img/coinbase_logo.jpeg';
 import coin98Logo from '../../assets/img/coin98.png';
 import mathWalletLogo from '../../assets/img/mathWallet.png';
+import rabbyWalletLogo from '../../assets/img/rabby.png';
 import { useWallet } from 'use-wallet';
 const useStyles = makeStyles((theme) => ({
 	paper: {
@@ -78,6 +79,13 @@ const WalletProviderModal = ({ open, handleClose }) => {
 							connect('injected');
 						}}
 						title="Math Wallet"
+					/>
+					<WalletCard
+						icon={<img src={rabbyWalletLogo} alt="Rabby logo" style={{ height: 32, borderRadius: 8 }} />}
+						onConnect={() => {
+							connect('injected');
+						}}
+						title="Rabby Wallet"
 					/>
 				</List>
 			</div>
